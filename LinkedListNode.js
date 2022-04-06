@@ -18,9 +18,10 @@ class LinkedListNode {
 
   //need to get a list of... nodes?
   getList() {
+    console.log('this: ', this.root);
     //if "this" is the node, then I need to check if "this" has any value.
     //if it does not, I need to return...a string of 0? or, no nodes? idk
-    if (!this) return '0';
+    if (!this.root) return '0';
     //if it does, return a string with the value, and then call getList again???
     return this.toString + this.getList();
   }
