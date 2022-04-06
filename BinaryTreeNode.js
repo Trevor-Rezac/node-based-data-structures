@@ -10,8 +10,15 @@ class BinaryTreeNode {
     //if 'this.value' is greater than either this.left or this.right, I need to add the node to the right
     //if 'this.value' is less than either this.left or this.right, I need to add the node to the left
     //otherwise, if 'this.#next' value is less than  'this.value', I need to do this.left = node
-    if (!this.left || !this.right) {
-      return node;
+    if (node.value === this.value) {
+      return;
+    }
+
+    if (node.value < this.value) {
+      if (!this.left) this.left = node;
+    } else {
+      if (!this.right) this.right = node;
+      else this.right.add(node);
     }
   }
 }
@@ -25,3 +32,5 @@ const D = new BinaryTreeNode('D');
 B.add(A);
 B.add(D);
 B.add(C);
+
+console.log('B: ', B);

@@ -7,8 +7,8 @@
   "scripts": {
     "test": "jest --verbose --runInBand --testLocationInResults",
     "test:watch": "npm run test -- --watch",
-    "start": "node LinkedListNode.js",
-    "start:watch": "nodemon LinkedListNode.js"
+    "start": "nodemon BinaryTreeNode.js",
+    "start:watch": "nodemon BinaryTreeNode.js"
   },
   "jest": {
     "testEnvironment": "node"
